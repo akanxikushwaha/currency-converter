@@ -1,0 +1,22 @@
+.container{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+#box{
+    background-color: aquamarine;
+    height: 100px;
+    width:300px;
+    border-radius: 10px;
+    display: flex;
+}
+input{
+    width: 50px;
+}
+.box{
+   height: 100px;
+   width:150px;
+   line-height: 100px;
+   text-align: center;
+    
+}
