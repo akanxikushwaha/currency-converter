@@ -24,22 +24,27 @@ function App() {
     <>
     <h1>currency converter</h1>
     <div>
-
-    <Box tofrom="from"
+    <div id="boxContainer">
+      <Box tofrom="from"
     amount={amount}
     currencyOptions={optionArray}
     onAmountChange={(amount)=>setAmount(amount)}
     selectCurrency={from}
     onCurrencyChange={(currency)=>setFrom(currency)}/>
-
+    <br/>
     <Box tofrom="to"
     amount={convertedAmount}
     currencyOptions={optionArray}
     amountDisable //sending true
     selectCurrency={to}
-    onCurrencyChange={(currency)=>setTo({currency})}/>
-
-    <div onClick={displayResult}>convert {from} to {to}</div>
+    onCurrencyChange={(currency)=>setTo(currency)}/>
+    </div>
+    
+    <br/>
+    <div className="container"> 
+      <div id='convert' onClick={displayResult}>convert {from} to {to}</div>
+    </div>
+    <br/>
     </div>
     <button onClick={swap}>swap</button>
     

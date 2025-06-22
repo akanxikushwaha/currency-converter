@@ -1,22 +1,39 @@
+h1{
+    color: aliceblue;
+}
+body{
+    background-color: #313628;    
+}
+#convert{
+    text-align: center;
+    width: 200px;
+    height: 30px;
+    background-color: #A4AC96;
+    color: aliceblue;
+    line-height: 30px;
+}
 .container{
     display: flex;
     justify-content: center;
     text-align: center;
 }
 #box{
-    background-color: aquamarine;
-    height: 100px;
+    background-color: #857F74;
+    height: 70px;
     width:300px;
-    border-radius: 10px;
     display: flex;
+    border-radius: 10px;
 }
+
 input{
     width: 100px;
 }
 .box{
    height: 100px;
    width:150px;
-   line-height: 100px;
+   line-height: 70px;
    text-align: center;
     
 }
+
+

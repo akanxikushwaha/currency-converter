@@ -28,7 +28,7 @@ function Box({
                 {/*value will be in string format hence integer,&& is 'and' checking if onAmountChange exists*/}
             </div>
             <div id="currencySelect" className="box">
-                <label htmlFor="a">Currency</label>
+                <label htmlFor="a">Currency </label>
                 <select name="currency" 
                     value={selectCurrency}
                     onChange={(e)=> onCurrencyChange && onCurrencyChange(e.target.value)}
