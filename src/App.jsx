@@ -26,7 +26,7 @@ function App() {
     <Box tofrom="from"
     amount={amount}
     currencyOptions={optionArray}
-    onAmountChange={()=>setAmount({amount})}
+    onAmountChange={(amount)=>setAmount({amount})}
     selectCurrency={from}
     onCurrencyChange={(currency)=>setAmount(amount)}/>
 
@@ -35,7 +35,7 @@ function App() {
     currencyOptions={optionArray}
     amountDisable //sending true
     selectCurrency={to}
-    onCurrencyChange={()=>{}}/>
+    onCurrencyChange={(currency)=>setTo({currency})}/>
 
     <div onClick={displayResult}>convert {from} to {to}</div>
     </div>

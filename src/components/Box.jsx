@@ -18,14 +18,14 @@ function Box({
     <div className="container">
         <div id="box">
             <div id="amountBox" className="box">
-                <label htmlFor="a">{tofrom}</label> /*for*/
+                <label htmlFor="a">{tofrom}</label> {/*for*/}
                 <input type="number"
                 placeholder='Amount'
                 id="a"
                 disabled={amountDisable}
                 value={amount}
-                onChange={(e)=> onAmountChange && onAmountChange(parseInt(e.target.value))}/>
-                /*value will be in string format hence integer,&& is 'and' checking if onAmountChange exists*/
+                onChange={(e)=> onAmountChange && onAmountChange(Number(e.target.value))}/>
+                {/*value will be in string format hence integer,&& is 'and' checking if onAmountChange exists*/}
             </div>
             <div id="currencySelect" className="box">
                 <label htmlFor="a">Currency</label>
