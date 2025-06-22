@@ -14,6 +14,8 @@ function App() {
   function swap(){
     setFrom(to);
     setTo(from);
+    setAmount(convertedAmount);
+    setConvertedAmount(amount);
   }
   function displayResult(){
     setConvertedAmount( amount * currencyInfo[to]);
@@ -26,9 +28,9 @@ function App() {
     <Box tofrom="from"
     amount={amount}
     currencyOptions={optionArray}
-    onAmountChange={(amount)=>setAmount({amount})}
+    onAmountChange={(amount)=>setAmount(amount)}
     selectCurrency={from}
-    onCurrencyChange={(currency)=>setAmount(amount)}/>
+    onCurrencyChange={(currency)=>setFrom(currency)}/>
 
     <Box tofrom="to"
     amount={convertedAmount}
