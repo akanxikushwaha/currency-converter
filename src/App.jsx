@@ -5,10 +5,10 @@ import useCurrencyInfo from './hooks/useCurrencyInfo.js'
 
 
 function App() {
-  const [amount, setAmount] = useState(0);
+  const [amount, setAmount] = useState();
   const [from, setFrom] = useState("usd")
   const [to, setTo] = useState("inr")
-  const [convertedAmount, setConvertedAmount] = useState(0);
+  const [convertedAmount, setConvertedAmount] = useState();
   const currencyInfo = useCurrencyInfo(from);
   const optionArray = Object.keys(currencyInfo);
   function swap(){
@@ -31,7 +31,7 @@ function App() {
     onAmountChange={(amount)=>setAmount(amount)}
     selectCurrency={from}
     onCurrencyChange={(currency)=>setFrom(currency)}/>
-    <br/>
+    <button onClick={swap}>⇋</button>
     <Box tofrom="to"
     amount={convertedAmount}
     currencyOptions={optionArray}
@@ -46,7 +46,6 @@ function App() {
     </div>
     <br/>
     </div>
-    <button onClick={swap}>swap</button>
     
     </>
   )
